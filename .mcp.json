@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "formo": {
+      "type": "http",
+      "url": "https://api.formo.so/v0/mcp/"
+    }
+  }
+}

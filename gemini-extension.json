@@ -1,0 +1,11 @@
+{
+  "name": "formo",
+  "version": "1.0.0",
+  "description": "Onchain product analytics for your app: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
+  "contextFileName": "skills/formo-analytics/SKILL.md",
+  "mcpServers": {
+    "formo": {
+      "httpUrl": "https://api.formo.so/v0/mcp/"
+    }
+  }
+}

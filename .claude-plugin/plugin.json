@@ -1,0 +1,14 @@
+{
+  "name": "formo",
+  "displayName": "Formo",
+  "version": "1.0.0",
+  "description": "Onchain product analytics for your app: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
+  "author": {
+    "name": "Formo",
+    "url": "https://formo.so"
+  },
+  "homepage": "https://docs.formo.so/mcp/overview",
+  "repository": "https://github.com/getformo/formo-plugin",
+  "license": "MIT",
+  "keywords": ["analytics", "web3", "onchain", "wallets", "product-analytics"]
+}

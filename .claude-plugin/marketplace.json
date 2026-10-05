@@ -1,0 +1,17 @@
+{
+  "name": "formo-plugin",
+  "owner": {
+    "name": "Formo",
+    "url": "https://formo.so"
+  },
+  "metadata": {
+    "description": "Formo plugins for Claude: onchain product analytics."
+  },
+  "plugins": [
+    {
+      "name": "formo",
+      "source": "./",
+      "description": "Onchain product analytics for your app: events, wallets, funnels, retention, revenue, and dashboards from your Formo project."
+    }
+  ]
+}

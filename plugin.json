@@ -1,0 +1,105 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "formo",
+  "version": "1.0.0",
+  "description": "Onchain product analytics for your app: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
+  "author": {
+    "name": "Formo",
+    "email": "support@formo.so",
+    "url": "https://formo.so"
+  },
+  "homepage": "https://docs.formo.so/mcp/overview",
+  "repository": "https://github.com/getformo/formo-plugin",
+  "license": "MIT",
+  "keywords": [
+    "analytics",
+    "web3",
+    "onchain",
+    "wallets",
+    "product-analytics"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Formo",
+        "shortDescription": "Onchain product analytics",
+        "longDescription": "Formo is product analytics for onchain apps. Connect your Formo project to ask questions about your users and wallets in plain language, and to keep dashboards and alerts up to date.\n\nWhat you can do:\n- Track growth: visitors, connected wallets, transactions, and revenue over any date range, with the previous period for comparison.\n- Understand journeys: funnels, user paths, retention, cohorts, and lifecycle stages.\n- Know your wallets: top wallets by volume, chains, net worth, labels, and a full profile for any address.\n- Find where users come from: top sources, pages, locations, and page speed.\n- Run SQL on your project data when a question needs a custom query.\n- Manage your workspace: build boards and charts, create segments, set alerts, and label wallets.\n\nAccess is scoped to the one project you choose when you sign in. Read tools never change data. Tools that change or delete data ask for your approval first, and delete tools also need an explicit confirmation.",
+        "developerName": "Formo",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://formo.so",
+        "supportURL": "https://formo.so/support",
+        "privacyPolicyURL": "https://formo.so/privacy",
+        "termsOfServiceURL": "https://formo.so/tos",
+        "defaultPrompt": [
+          "How did my app grow last week compared with the week before?",
+          "Who are my top 10 wallets by volume this month?",
+          "Where do visitors drop off between connecting a wallet and their first transaction?"
+        ],
+        "brandColor": "#C1F005",
+        "brandColorDark": "#C1F005",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      },
+      "onboardingSkill": "./skills/formo-analytics/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Weekly growth summary with period comparison",
+              "prompt": "How many visitors and connected wallets did my app have last week, and how does that compare with the week before?",
+              "tools_triggered": "kpis",
+              "expected_behavior": "Calls kpis for last week with the previous period included, then reports visitors, wallets, and the change for each in plain language."
+            },
+            {
+              "description": "Conversion funnel from wallet connect to transaction",
+              "prompt": "In the last 30 days, what share of visitors connected a wallet, and what share of those made a transaction?",
+              "tools_triggered": "funnel",
+              "expected_behavior": "Calls funnel with page view, connect, and transaction steps for the last 30 days, then reports the count and conversion rate at each step."
+            },
+            {
+              "description": "Top wallets by volume",
+              "prompt": "Who are my top 10 wallets by transaction volume this month?",
+              "tools_triggered": "top_wallets",
+              "expected_behavior": "Calls top_wallets for the current month with a limit of 10 and returns a ranked table of addresses with volume."
+            },
+            {
+              "description": "Single wallet profile lookup",
+              "prompt": "Give me a profile of wallet 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045: net worth, main chains, and labels.",
+              "tools_triggered": "search_profile",
+              "expected_behavior": "Calls search_profile for the address and summarizes net worth, chains, tokens, and labels from the result."
+            },
+            {
+              "description": "Create an event alert after user approval",
+              "prompt": "Email me at review@formo.so each time a new wallet connects to my app.",
+              "tools_triggered": "create_alert",
+              "expected_behavior": "Proposes an event alert on wallet connects with an email recipient, asks the user to approve, then calls create_alert and confirms the alert name and recipient."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Moving funds is out of scope",
+              "prompt": "Send 0.1 ETH from my treasury wallet to 0x000000000000000000000000000000000000dEaD."
+            },
+            {
+              "description": "Data for a project the user did not connect",
+              "prompt": "Show me Uniswap's daily active users for last month."
+            },
+            {
+              "description": "General question with no project data",
+              "prompt": "Explain how proof of stake works in Ethereum."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Initial release: project analytics, wallet profiles, SQL, dashboards, segments, and alerts."
+      }
+    }
+  }
+}

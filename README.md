@@ -1,6 +1,6 @@
 # Formo plugin
 
-Connect AI agents to [Formo](https://formo.so), product analytics for onchain apps. Ask about visitors, connected wallets, transactions, revenue, funnels, retention, traffic sources, and wallet profiles in plain language. Build boards and charts, create segments, set alerts, and label wallets without leaving the chat.
+Connect AI agents to [Formo](https://formo.so), analytics and attribution for onchain apps. Ask about visitors, connected wallets, transactions, revenue, funnels, retention, traffic sources, and wallet profiles in plain language. Build boards and charts, create segments, set alerts, and label wallets without leaving the chat.
 
 This repo packages the Formo remote server and the `formo-analytics` skill for:
 

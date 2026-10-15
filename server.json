@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "so.formo/formo",
   "title": "Formo",
-  "description": "Onchain product analytics: events, wallets, funnels, retention, revenue, and dashboards.",
-  "version": "1.0.0",
+  "description": "Analytics and attribution for onchain apps: events, wallets, funnels, retention, and revenue.",
+  "version": "1.0.1",
   "websiteUrl": "https://docs.formo.so/mcp/overview",
   "repository": {
     "url": "https://github.com/getformo/formo-plugin",

@@ -5,7 +5,7 @@ description: Analyze a Formo project with the Formo tools. Use when the user ask
 
 # Formo Analytics
 
-Formo is product analytics for onchain apps. The Formo tools read one project: the project the user picked when they connected. Use this skill to answer questions about that project and to keep its dashboards and alerts up to date.
+Formo is analytics and attribution for onchain apps. The Formo tools read one project: the project the user picked when they connected. Use this skill to answer questions about that project and to keep its dashboards and alerts up to date.
 
 ## Ground rules
 

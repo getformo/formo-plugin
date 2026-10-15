@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "formo",
-  "version": "1.0.0",
-  "description": "Onchain product analytics for your app: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
+  "version": "1.0.1",
+  "description": "Analytics and attribution for onchain apps: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
   "author": {
     "name": "Formo",
     "email": "support@formo.so",
@@ -16,14 +16,14 @@
     "web3",
     "onchain",
     "wallets",
-    "product-analytics"
+    "attribution"
   ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Formo",
-        "shortDescription": "Onchain product analytics",
-        "longDescription": "Formo is product analytics for onchain apps. Connect your Formo project to ask questions about your users and wallets in plain language, and to keep dashboards and alerts up to date.\n\nWhat you can do:\n- Track growth: visitors, connected wallets, transactions, and revenue over any date range, with the previous period for comparison.\n- Understand journeys: funnels, user paths, retention, cohorts, and lifecycle stages.\n- Know your wallets: top wallets by volume, chains, net worth, labels, and a full profile for any address.\n- Find where users come from: top sources, pages, locations, and page speed.\n- Run SQL on your project data when a question needs a custom query.\n- Manage your workspace: build boards and charts, create segments, set alerts, and label wallets.\n\nAccess is scoped to the one project you choose when you sign in. Read tools never change data. Tools that change or delete data ask for your approval first, and delete tools also need an explicit confirmation.",
+        "shortDescription": "Analytics and attribution for onchain apps",
+        "longDescription": "Formo is analytics and attribution for onchain apps. Connect your Formo project to ask questions about your users and wallets in plain language, and to keep dashboards and alerts up to date.\n\nWhat you can do:\n- Track growth: visitors, connected wallets, transactions, and revenue over any date range, with the previous period for comparison.\n- Understand journeys: funnels, user paths, retention, cohorts, and lifecycle stages.\n- Know your wallets: top wallets by volume, chains, net worth, labels, and a full profile for any address.\n- Find where users come from: top sources, pages, locations, and page speed.\n- Run SQL on your project data when a question needs a custom query.\n- Manage your workspace: build boards and charts, create segments, set alerts, and label wallets.\n\nAccess is scoped to the one project you choose when you sign in. Read tools never change data. Tools that change or delete data ask for your approval first, and delete tools also need an explicit confirmation.",
         "developerName": "Formo",
         "category": "Productivity",
         "capabilities": [

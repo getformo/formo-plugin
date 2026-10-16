@@ -36,7 +36,7 @@
         "termsOfServiceURL": "https://formo.so/tos",
         "defaultPrompt": [
           "How did my app grow last week compared with the week before?",
-          "Who are my top 10 wallets by volume this month?",
+          "Who are my top 10 wallets by transaction volume?",
           "Where do visitors drop off between connecting a wallet and their first transaction?"
         ],
         "brandColor": "#0B0B0B",
@@ -62,9 +62,9 @@
             },
             {
               "description": "Top wallets by volume",
-              "prompt": "Who are my top 10 wallets by transaction volume this month?",
-              "tools_triggered": "top_wallets",
-              "expected_behavior": "Calls top_wallets for the current month with a limit of 10 and returns a ranked table of addresses with volume."
+              "prompt": "Who are my top 10 wallets by transaction volume?",
+              "tools_triggered": "project_users",
+              "expected_behavior": "Calls project_users ordered by volume, descending, with a limit of 10 and returns a ranked table of wallet addresses with volume."
             },
             {
               "description": "Single wallet profile lookup",

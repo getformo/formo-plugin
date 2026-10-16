@@ -32,7 +32,9 @@ Use a named analytics tool first. Use SQL only when no named tool fits.
 | Where users come from | `top_sources`, `top_pages`, `top_locations` |
 | Page speed | `web_vitals` |
 | Revenue and volume breakdowns | `revenue_overview`, `revenue_by_metric`, `volume_by_metric` |
-| Biggest wallets, main chains | `top_wallets`, `top_chains` |
+| Biggest wallets by volume, revenue, or net worth | `project_users` with `order_by` |
+| Wallet apps used (MetaMask, Rabby) | `top_wallets` |
+| Main chains | `top_chains` |
 | One wallet's profile | `search_profile` |
 | A filtered list of users | `project_users` |
 | Valid values for a filter | `distinct_values` |
@@ -51,7 +53,7 @@ For a custom question:
 
 1. `kpis` for the last 7 days with the previous period.
 2. `top_sources` and `top_events` for the same 7 days.
-3. `top_wallets` with a limit of 10.
+3. `project_users` ordered by volume with a limit of 10.
 4. Report: headline numbers with the change from last week, the biggest mover, and one thing to look at next. Keep it short.
 
 ### Conversion problem
@@ -64,7 +66,7 @@ For a custom question:
 ### Wallet questions
 
 - One address: `search_profile`, then summarize net worth, chains, tokens, and labels.
-- The best users: `top_wallets`, then `search_profile` on the top few if the user wants detail.
+- The best users: `project_users` ordered by volume, revenue, or net worth, then `search_profile` on the top few if the user wants detail.
 - Save a group for later: propose a `create_segment` filter and create it after approval.
 
 ### Dashboards

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "formo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Analytics and attribution for onchain apps: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
   "author": {
     "name": "Formo",
@@ -49,16 +49,16 @@
         "test_cases": {
           "positive": [
             {
-              "description": "Weekly growth summary with period comparison",
-              "prompt": "How many visitors and connected wallets did my app have last week, and how does that compare with the week before?",
+              "description": "Weekly traffic summary with period comparison",
+              "prompt": "How many visitors and sessions did my app have last week, and how does that compare with the week before?",
               "tools_triggered": "kpis",
-              "expected_behavior": "Calls kpis for last week with the previous period included, then reports visitors, wallets, and the change for each in plain language."
+              "expected_behavior": "Calls kpis for last week with include_previous_period set to true, then reports visitors and sessions for each week and the change between them in plain language."
             },
             {
-              "description": "Conversion funnel from wallet connect to transaction",
-              "prompt": "In the last 30 days, what share of visitors connected a wallet, and what share of those made a transaction?",
+              "description": "Conversion funnel from page view to wallet connect",
+              "prompt": "In the last 30 days, what share of my visitors went on to connect a wallet?",
               "tools_triggered": "funnel",
-              "expected_behavior": "Calls funnel with page view, connect, and transaction steps for the last 30 days, then reports the count and conversion rate at each step."
+              "expected_behavior": "Calls funnel for the last 30 days with two steps, {\"type\":\"event\",\"event\":\"page\"} then {\"type\":\"event\",\"event\":\"connect\"}, then reports the user count at each step and the conversion rate from page view to connect."
             },
             {
               "description": "Top wallets by volume",
@@ -99,7 +99,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Initial release: project analytics, wallet profiles, SQL, dashboards, segments, and alerts."
+        "release_notes": "Clearer funnel step format and review test cases that match each tool's output."
       }
     }
   }

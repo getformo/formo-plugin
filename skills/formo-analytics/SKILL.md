@@ -21,13 +21,13 @@ Use a named analytics tool first. Use SQL only when no named tool fits.
 
 | Question | Tool |
 |---|---|
-| Visitors, wallets, transactions, revenue for a period | `kpis` (set `include_previous_period` to compare) |
+| Visitors, sessions, pageviews, bounce rate for a period | `kpis` (set `include_previous_period` to compare) |
 | A metric over time | `event_timeseries`, `revenue_timeseries` |
 | Most common events | `top_events` |
 | Step-by-step conversion | `funnel` |
 | Paths users take | `flow` |
 | Do users come back | `retention`, `cohort_analysis` |
-| New, active, churned users | `lifecycle` |
+| Wallet counts: new, returning, churned | `lifecycle` |
 | How often users return | `frequency` |
 | Where users come from | `top_sources`, `top_pages`, `top_locations` |
 | Page speed | `web_vitals` |
@@ -59,7 +59,7 @@ For a custom question:
 ### Conversion problem
 
 1. Ask which steps matter if the user did not say (for example: page view, wallet connect, first transaction).
-2. `funnel` with those steps and the date range.
+2. `funnel` with those steps and the date range. A built-in step is `{"type":"event","event":"connect"}`; a custom event is `{"type":"track","event":"<name>"}`.
 3. Find the step with the largest drop. Use `flow` to see where users go instead.
 4. Suggest one change to test.
 

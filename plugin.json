@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "formo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Analytics and attribution for onchain apps: events, wallets, funnels, retention, revenue, and dashboards from your Formo project.",
   "author": {
     "name": "Formo",
@@ -99,7 +99,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Clearer funnel step format and review test cases that match each tool's output."
+        "release_notes": "Fixes reviewer sign-in: a dedicated demo account now has a project with live data and admin access, so the consent page lists a project. No tool or skill changes."
       }
     }
   }
